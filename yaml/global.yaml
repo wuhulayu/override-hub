@@ -22,6 +22,18 @@ proxy-groups:
     include-all: true
     interval: 300
     tolerance: 50
+  - name: HamiVideo
+    icon: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbp4BM2GCKDyJye3ccL_6poUsz1XJ0mnYUAA&s
+    type: select
+    proxies:
+      - 台湾节点
+      - 自动选择
+  - name: TVB
+    icon: https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/TVB.png
+    type: select
+    proxies:
+      - 香港节点
+      - 自动选择
   - name: 电报消息
     icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Telegram.png
     type: select
@@ -571,5 +583,6 @@ rules:
   - "RULE-SET,ChinaDomain,全球直连"
   - "RULE-SET,ChinaCompanyIp,全球直连"
   - "RULE-SET,Download,全球直连"
+  - "GEOSITE,tvb,TVB"
   - "GEOIP,CN,全球直连"
   - "MATCH,漏网之鱼"
