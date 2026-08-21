@@ -40,7 +40,7 @@ proxy-groups:
     proxies: ["⚡ 自动选择", DIRECT, REJECT]
   - name: "⚡ 自动选择"
     type: url-test
-    proxies: ["VIP-香港-1线 | 专线"]
+    proxies: []
     url: "https://www.gstatic.com/generate_204"
     interval: 300
     lazy: false
