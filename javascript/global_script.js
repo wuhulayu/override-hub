@@ -151,6 +151,7 @@ for (const r in ruleProviders) {
 }
 
 const rules = [
+  "DOMAIN-SUFFIX,xinyue.net,直连",
   "RULE-SET,HamiVideo,HamiVideo",
   "RULE-SET,ADBlock,广告拦截",
   "RULE-SET,AdditionalFilter,广告拦截",
