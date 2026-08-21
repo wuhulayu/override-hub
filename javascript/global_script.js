@@ -79,7 +79,7 @@ const ruleOptions = {
   EHentai: false,
   SteamFix: false,
   GoogleFCM: false,
-  AdditionalFilter: true,
+  AdditionalFilter: false,
   AdditionalCDNResources: false,
   Crypto: false,
   HamiVideo: false,
