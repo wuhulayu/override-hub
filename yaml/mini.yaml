@@ -5,6 +5,7 @@ proxy-groups:
   - name: "⚡ 自动选择"
     type: url-test
     url: "https://www.gstatic.com/generate_204"
+    proxies: []
     interval: 300
     lazy: false
   - name: "🛑 广告拦截"
