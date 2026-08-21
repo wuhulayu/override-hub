@@ -90,7 +90,7 @@ const ruleOptions = {
   BAHAMUT: false,
   PIKPAK: false,
   BILIBILI: false,
-  TVB: false
+  tvb: false
 };
 // 禁用的代理组
 const disabledGroups = [];
