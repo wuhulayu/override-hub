@@ -175,7 +175,7 @@ const rules = [
   "GEOSITE,BAHAMUT,Bahamut",
   "GEOSITE,BILIBILI,Bilibili",
   "GEOSITE,MICROSOFT@CN,直连",
-  "GEOSITE,,PikPak",
+  "GEOSITE,PIKPAK,PikPak",
   "GEOSITE,GFW,选择节点",
   "GEOSITE,CN,直连",
   "GEOSITE,PRIVATE,直连",
