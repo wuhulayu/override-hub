@@ -34,6 +34,32 @@ sniffer:
     QUIC:
       ports: [443, 8443]
 
+proxy-groups:
+  - name: "🚀 节点选择"
+    type: select
+    proxies: ["⚡ 自动选择", DIRECT, REJECT]
+  - name: "⚡ 自动选择"
+    type: url-test
+    proxies: ["VIP-香港-1线 | 专线"]
+    url: "https://www.gstatic.com/generate_204"
+    interval: 300
+    lazy: false
+  - name: "🛑 广告拦截"
+    type: select
+    proxies: [REJECT, DIRECT, "🚀 节点选择"]
+  - name: "🏠 私有网络"
+    type: select
+    proxies: [DIRECT, REJECT, "🚀 节点选择", "⚡ 自动选择"]
+  - name: "🔒 国内服务"
+    type: select
+    proxies: [DIRECT, REJECT, "🚀 节点选择", "⚡ 自动选择"]
+  - name: "🌍 非中国"
+    type: select
+    proxies: ["🚀 节点选择", "⚡ 自动选择", DIRECT, REJECT]
+  - name: "🐟 漏网之鱼"
+    type: select
+    proxies: ["🚀 节点选择", "⚡ 自动选择", DIRECT, REJECT]
+
 rule-providers:
   category-ads-all: {type: http, behavior: domain, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/category-ads-all.mrs", path: ./ruleset/category-ads-all.mrs, interval: 86400, format: mrs}
   private: {type: http, behavior: domain, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/private.mrs", path: ./ruleset/private.mrs, interval: 86400, format: mrs}
