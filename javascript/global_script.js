@@ -90,6 +90,7 @@ const ruleOptions = {
   BAHAMUT: false,
   PIKPAK: false,
   BILIBILI: false,
+  TVB: false
 };
 // 禁用的代理组
 const disabledGroups = [];
@@ -173,7 +174,7 @@ const rules = [
   "GEOSITE,BAHAMUT,Bahamut",
   "GEOSITE,BILIBILI,Bilibili",
   "GEOSITE,MICROSOFT@CN,直连",
-  "GEOSITE,PIKPAK,PikPak",
+  "GEOSITE,,PikPak",
   "GEOSITE,GFW,选择节点",
   "GEOSITE,CN,直连",
   "GEOSITE,PRIVATE,直连",
