@@ -82,7 +82,7 @@ const ruleOptions = {
   AdditionalFilter: true,
   AdditionalCDNResources: false,
   Crypto: false,
-  HamiVideo: true,
+  HamiVideo: false,
   TELEGRAM: false,
   YOUTUBE: false,
   NETFLIX: false,
