@@ -5,7 +5,6 @@ proxy-groups:
   - name: "⚡ 自动选择"
     type: url-test
     url: "https://www.gstatic.com/generate_204"
-    proxies: []
     interval: 300
     lazy: false
   - name: "🛑 广告拦截"
@@ -25,13 +24,55 @@ proxy-groups:
     proxies: ["🚀 节点选择", "⚡ 自动选择", DIRECT, REJECT]
 
 rule-providers:
-  category-ads-all: {type: http, behavior: domain, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/category-ads-all.mrs", path: ./ruleset/category-ads-all.mrs, interval: 86400, format: mrs}
-  private: {type: http, behavior: domain, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/private.mrs", path: ./ruleset/private.mrs, interval: 86400, format: mrs}
-  private-ip: {type: http, behavior: ipcidr, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geoip/private.mrs", path: ./ruleset/private-ip.mrs, interval: 86400, format: mrs}
-  geolocation-cn: {type: http, behavior: domain, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/geolocation-cn.mrs", path: ./ruleset/geolocation-cn.mrs, interval: 86400, format: mrs}
-  cn-ip: {type: http, behavior: ipcidr, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geoip/cn.mrs", path: ./ruleset/cn-ip.mrs, interval: 86400, format: mrs}
-  geolocation-!cn: {type: http, behavior: domain, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/geolocation-!cn.mrs", path: "./ruleset/geolocation-!cn.mrs", interval: 86400, format: mrs}
-  cn: {type: http, behavior: domain, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/cn.mrs", path: ./ruleset/cn.mrs, interval: 86400, format: mrs}
+  category-ads-all:
+    type: http
+    behavior: domain
+    url: "https://wget.la/github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/category-ads-all.mrs"
+    path: ./ruleset/category-ads-all.mrs
+    interval: 86400
+    format: mrs
+  private:
+    type: http
+    behavior: domain
+    url: "https://wget.la/github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/private.mrs"
+    path: ./ruleset/private.mrs
+    interval: 86400
+    format: mrs
+  private-ip:
+    type: http
+    behavior: ipcidr
+    url: "https://wget.la/github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geoip/private.mrs"
+    path: ./ruleset/private-ip.mrs
+    interval: 86400
+    format: mrs
+  geolocation-cn:
+    type: http
+    behavior: domain
+    url: "https://wget.la/github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/geolocation-cn.mrs"
+    path: ./ruleset/geolocation-cn.mrs
+    interval: 86400
+    format: mrs
+  cn-ip:
+    type: http
+    behavior: ipcidr
+    url: "https://wget.la/github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geoip/cn.mrs"
+    path: ./ruleset/cn-ip.mrs
+    interval: 86400
+    format: mrs
+  geolocation-!cn:
+    type: http
+    behavior: domain
+    url: "https://wget.la/github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/geolocation-!cn.mrs"
+    path: "./ruleset/geolocation-!cn.mrs"
+    interval: 86400
+    format: mrs
+  cn:
+    type: http
+    behavior: domain
+    url: "https://wget.la/github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/cn.mrs"
+    path: ./ruleset/cn.mrs
+    interval: 86400
+    format: mrs
 
 rules:
   - RULE-SET,category-ads-all,🛑 广告拦截
